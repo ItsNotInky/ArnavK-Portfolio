@@ -42,10 +42,14 @@ body {
 }
 
 .nav-links li a {
-    color: var(--text-color);
+    color: white;
     text-decoration: none;
     padding: 1rem;
     letter-spacing: .25rem;
     font-size: 1.1rem;
     display: block;
+}
+
+.nav-links li a.active {
+    color: var(--text-color);
 }
