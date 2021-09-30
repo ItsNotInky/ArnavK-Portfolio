@@ -1,3 +1,8 @@
+:root {
+    --bg-color: #1A1E24;
+    --text-color: #00FFF5;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -6,14 +11,14 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'NATS', sans-serif;
-    background-color: #1A1E24;
+    background-color: var(--bg-color);
 }
 
 .navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #1A1E24;
+    background-color: var(--bg-color);
     color: white;
     padding: 1rem 0rem 1rem 0rem;
 }
@@ -30,13 +35,13 @@ body {
 }
 
 .nav-links li:hover {
-    background-color: rgb(185, 185, 185);
+    background-color: #3f4652;
     text-decoration: underline;
     text-underline-offset: .35rem;
 }
 
 .nav-links li a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     padding: 1rem;
     letter-spacing: .25rem;
