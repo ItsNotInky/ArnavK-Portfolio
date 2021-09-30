@@ -6,13 +6,14 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'NATS', sans-serif;
+    background-color: #1A1E24;
 }
 
 .navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #333;
+    background-color: #1A1E24;
     color: white;
     padding: 1rem 0rem 1rem 0rem;
 }
