@@ -5,7 +5,7 @@
 2nd: #393E46  
 3rd: #00ADB5  
 4th (text-color): #00FFF5  
-!["Color hex values"](Colors.png "Colow hex values")
+!["Color hex values"](Colors.png "Color hex values")
 
 ---
 
