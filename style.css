@@ -7,3 +7,38 @@ body {
     padding: 0px;
     font-family: 'NATS', sans-serif;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+.nav-links ul {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+.nav-links li {
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover {
+    background-color: rgb(185, 185, 185);
+    text-decoration: underline;
+    text-underline-offset: .35rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    letter-spacing: .25rem;
+    font-size: 1.1rem;
+    display: block;
+}
