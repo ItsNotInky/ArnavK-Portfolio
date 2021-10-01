@@ -1,0 +1,55 @@
+:root {
+    --bg-color: #1A1E24;
+    --text-color: #00FFF5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'NATS', sans-serif;
+    background-color: var(--bg-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+.nav-links ul {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+.nav-links li {
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover {
+    background-color: #262d3b;
+    border-radius: .3rem;
+    text-decoration: underline;
+    text-underline-offset: .35rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    letter-spacing: .25rem;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.nav-links li a.active {
+    color: var(--text-color);
+}
