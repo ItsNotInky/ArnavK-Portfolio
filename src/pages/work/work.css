@@ -37,8 +37,8 @@ body {
 .nav-links li:hover {
     background-color: #262d3b;
     border-radius: .3rem;
-    text-decoration: underline;
-    text-underline-offset: .35rem;
+    /* text-decoration: underline;
+    text-underline-offset: .35rem; */
 }
 
 .nav-links li a {
