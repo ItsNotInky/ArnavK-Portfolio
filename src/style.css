@@ -16,6 +16,11 @@
     src: local('NATS Regular'), url('NATS-Regular.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'Sansation Regular';
+    src: url(Sansation_Regular.ttf);
+}
+
 body {
     margin: 0px;
     padding: 0px;
