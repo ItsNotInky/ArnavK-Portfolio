@@ -81,9 +81,9 @@ body {
     /* margin-left: auto;
     margin-right: auto;
     width: 100%; */
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */ /* Removed Flex */
     text-align: center;
 }
 
@@ -94,5 +94,16 @@ body {
 }
 
 .title h1 {
+    font-weight: normal;
+}
+
+.home-about-intro {
+    font-size: 1.6rem;
+    letter-spacing: .125rem;
+    /* margin-top: 2rem; */
+    font-family: 'Sansation Regular', 'Sans-Serif';
+}
+
+.home-about-intro h4 {
     font-weight: normal;
 }
