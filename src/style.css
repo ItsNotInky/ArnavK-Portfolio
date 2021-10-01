@@ -88,7 +88,11 @@ body {
 }
 
 .title {
-    font-size: 5rem;
+    font-size: 3rem;
     letter-spacing: .125rem;
     margin-top: 3.5rem;
+}
+
+.title h1 {
+    font-weight: normal;
 }
