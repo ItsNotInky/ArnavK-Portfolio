@@ -5,12 +5,21 @@
 
 * {
     box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face {
+    font-family: 'NATS Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('NATS Regular'), url('NATS-Regular.woff') format('woff');
 }
 
 body {
     margin: 0px;
     padding: 0px;
-    font-family: 'NATS', sans-serif;
+    font-family: 'NATS Regular', sans-serif;
     background-color: var(--bg-color);
 }
 
@@ -51,11 +60,28 @@ body {
     color: white;
     text-decoration: none;
     padding: 1rem;
-    letter-spacing: .25rem;
-    font-size: 1.1rem;
+    letter-spacing: .125rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 2rem;
     display: block;
 }
 
 .nav-links li a.active {
     color: var(--text-color);
+}
+
+.text-container {
+    color: white;
+    /* margin-left: auto;
+    margin-right: auto;
+    width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    font-size: x-large;
 }
