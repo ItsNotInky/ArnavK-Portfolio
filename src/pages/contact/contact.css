@@ -8,12 +8,24 @@
     padding: 0px;
     margin: 0px;
 }
+@font-face {
+    font-family: 'NATS Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('NATS Regular'), url('../../NATS-Regular.woff') format('woff');
+}
 
 body {
     margin: 0px;
     padding: 0px;
-    font-family: 'NATS', sans-serif;
+    font-family: 'NATS Regular', sans-serif;
     background-color: var(--bg-color);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
 .navbar {
@@ -34,12 +46,6 @@ body {
 .nav-links li {
     list-style: none;
     transition: all 0.3s ease;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
 .nav-links li:hover {
@@ -53,8 +59,10 @@ body {
     color: white;
     text-decoration: none;
     padding: 1rem;
-    letter-spacing: .25rem;
-    font-size: 1.1rem;
+    letter-spacing: .12rem;
+    font-size: 1.75rem;
+    font-weight: normal;
+    line-height: 2rem;
     display: block;
 }
 
