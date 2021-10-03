@@ -56,9 +56,11 @@ body {
 
 .nav-links li:hover {
     background-color: #262d3b;
-    border-radius: .3rem;
-    /* text-decoration: underline;
-    text-underline-offset: .35rem; */
+    border-radius: 10px;
+}
+
+.nav-links li a:hover:not(.nav-links li a.active) {
+    font-weight: 600;
 }
 
 .nav-links li a {
@@ -88,13 +90,10 @@ body {
 }
 
 #title {
-    font-size: 3rem;
+    font-size: 6rem;
     letter-spacing: .125rem;
     margin-bottom: 0px;
-}
-
-#title h1 {
-    margin-top: 1.5rem;
+    margin-top: 3.5rem;
     font-weight: normal;
 }
 
@@ -141,7 +140,7 @@ body {
 }
 
 #github:hover{
-    /* fill: #6cc644; */
+    /* fill: #6cc644; */ /* GitHub Green */
     fill: black;
 }
 
