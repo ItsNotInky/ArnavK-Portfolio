@@ -63,8 +63,7 @@ body {
 }
 
 .nav-links li:hover {
-    background-color: #262d3b52;
-    
+    background-color: #262d3b62;
     border-radius: 10px;
 }
 
@@ -148,6 +147,7 @@ body {
 
 #github {
     fill: white;
+    transition: all 0.3s ease;
 }
 
 #github:hover{
@@ -157,6 +157,7 @@ body {
 
 #discord {
     fill: white;
+    transition: all 0.3s ease;
 }
 
 #discord:hover {
@@ -165,6 +166,7 @@ body {
 
 #twitter {
     fill: white;
+    transition: all 0.3s ease;
 }
 
 #twitter:hover {
@@ -173,6 +175,7 @@ body {
 
 #email {
     fill: white;
+    transition: all 0.3s ease;
 }
 
 #email:hover {
@@ -181,6 +184,7 @@ body {
 
 #instagram {
     fill: white;
+    transition: all 0.3s ease;
 }
 
 #instagram:hover {
