@@ -136,45 +136,45 @@ body {
     align-content: center;
 }
 
-#github svg {
+#github {
     fill: white;
 }
 
-#github svg:hover{
+#github:hover{
     /* fill: #6cc644; */
     fill: black;
 }
 
-#discord svg {
+#discord {
     fill: white;
 }
 
-#discord svg:hover {
+#discord:hover {
     fill: #7289da;
 }
 
-#twitter svg {
+#twitter {
     fill: white;
 }
 
-#twitter svg:hover {
+#twitter:hover {
     fill: #1DA1F2;
 }
 
-#email svg {
+#email {
     fill: white;
 }
 
-#email svg:hover {
-    fill: #ff563b;
+#email:hover {
+    fill: #ff6147;
 }
 
-#instagram svg {
+#instagram {
     fill: white;
 }
 
-#instagram svg:hover {
-    fill: rgb(103, 0, 112)
+#instagram:hover {
+    fill: #670070
     /* fill: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); */
     /* box-shadow: 0px 3px 10px rgba(0,0,0,.25); */
     /* -webkit-background-clip: text;
