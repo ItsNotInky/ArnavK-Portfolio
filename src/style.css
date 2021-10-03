@@ -98,14 +98,14 @@ body {
     font-weight: normal;
 }
 
-.home-about-intro {
+#home-about-intro {
     font-size: 1.6rem;
     letter-spacing: .1rem;
     font-family: 'Sansation Regular', 'Sans-Serif';
     font-weight: normal;
 }
 
-.learn-more {
+#learn-more {
     font-family: 'Sansation Regular', 'Sans-Serif';
     margin-top: 3.75rem;
     font-size: 1.45rem;
@@ -113,12 +113,12 @@ body {
     font-weight: 550;
 }
 
-.learn-more a {
+#learn-more a {
     text-decoration: none;
     color: var(--text-color);
 }
 
-.learn-more a:hover {
+#learn-more a:hover {
     text-decoration: underline;
     text-underline-offset: 0.3rem;
 }
@@ -136,44 +136,44 @@ body {
     align-content: center;
 }
 
-.github svg {
+#github svg {
     fill: white;
 }
 
-.github svg:hover{
+#github svg:hover{
     /* fill: #6cc644; */
     fill: black;
 }
 
-.discord svg {
+#discord svg {
     fill: white;
 }
 
-.discord svg:hover {
+#discord svg:hover {
     fill: #7289da;
 }
 
-.twitter svg {
+#twitter svg {
     fill: white;
 }
 
-.twitter svg:hover {
+#twitter svg:hover {
     fill: #1DA1F2;
 }
 
-.email svg {
+#email svg {
     fill: white;
 }
 
-.email svg:hover {
+#email svg:hover {
     fill: #ff563b;
 }
 
-.instagram svg {
+#instagram svg {
     fill: white;
 }
 
-.instagram svg:hover {
+#instagram svg:hover {
     fill: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     /* box-shadow: 0px 3px 10px rgba(0,0,0,.25); */
     -webkit-background-clip: text;
