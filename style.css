@@ -102,9 +102,6 @@ body {
     font-size: 1.6rem;
     letter-spacing: .1rem;
     font-family: 'Sansation Regular', 'Sans-Serif';
-}
-
-.home-about-intro h4 {
     font-weight: normal;
 }
 
@@ -113,26 +110,60 @@ body {
     margin-top: 3.75rem;
     font-size: 1.45rem;
     letter-spacing: .05rem;
-}
-
-.learn-more h4 {
     font-weight: 550;
 }
 
-.learn-more h4 a {
+.learn-more a {
     text-decoration: none;
     color: var(--text-color);
 }
 
-.learn-more h4 a:hover {
+.learn-more a:hover {
     text-decoration: underline;
     text-underline-offset: 0.3rem;
 }
 
 .social-media {
+    position: fixed;
+    bottom: 0px;
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
-.social-media div {
-    padding: 1rem;
+.social-media a {
+    margin: 1rem;
+    align-content: center;
+}
+
+.github svg {
+    fill: white;
+}
+
+.github svg:hover{
+    fill: #6cc644;
+}
+
+.discord svg {
+    fill: white;
+}
+
+.discord svg:hover {
+    fill: #7289da;
+}
+
+.twitter svg {
+    fill: white;
+}
+
+.twitter svg:hover {
+    fill: #1DA1F2;
+}
+
+.email svg {
+    fill: white;
+}
+
+.email svg:hover {
+    fill: #ff5236;
 }
