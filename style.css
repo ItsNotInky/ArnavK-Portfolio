@@ -141,7 +141,8 @@ body {
 }
 
 .github svg:hover{
-    fill: #6cc644;
+    /* fill: #6cc644; */
+    fill: black;
 }
 
 .discord svg {
@@ -165,5 +166,5 @@ body {
 }
 
 .email svg:hover {
-    fill: #ff5236;
+    fill: #ff563b;
 }
