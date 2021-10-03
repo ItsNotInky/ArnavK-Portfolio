@@ -59,7 +59,7 @@ body {
     border-radius: 10px;
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover:not(.nav-links li a.active) {
     font-weight: 600;
 }
 
