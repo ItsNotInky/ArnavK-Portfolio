@@ -1,6 +1,7 @@
 :root {
     --bg-color: #1A1E24;
     --text-color: #00FFF5;
+    --bg-color-rgba: rgba(26, 30, 36, 0.8);
 }
 
 * {
@@ -23,7 +24,7 @@
 
 body {
     /* background-image: url("background.png"); */
-    background-image: linear-gradient(rgba(26, 30, 36, 0.8), rgba(26, 30, 36, 0.75)), url(background.png);
+    background-image: linear-gradient(var(--bg-color-rgba), var(--bg-color-rgba)), url(background.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     -webkit-background-size: cover;
