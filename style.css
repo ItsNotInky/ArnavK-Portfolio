@@ -128,9 +128,42 @@ body {
     bottom: 0px;
     display: flex;
     text-align: center;
+    left: 42%;
 }
 
 .social-media a {
     margin: 1rem;
     align-content: center;
+}
+
+.github svg {
+    fill: white;
+}
+
+.github svg:hover{
+    fill: #6cc644;
+}
+
+.discord svg {
+    fill: white;
+}
+
+.discord svg:hover {
+    fill: #7289da;
+}
+
+.twitter svg {
+    fill: white;
+}
+
+.twitter svg:hover {
+    fill: #1DA1F2;
+}
+
+.email svg {
+    fill: white;
+}
+
+.email svg:hover {
+    fill: #ff5236;
 }
