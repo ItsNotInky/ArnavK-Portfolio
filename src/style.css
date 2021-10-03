@@ -56,9 +56,11 @@ body {
 
 .nav-links li:hover {
     background-color: #262d3b;
-    border-radius: .3rem;
-    /* text-decoration: underline;
-    text-underline-offset: .35rem; */
+    border-radius: 10px;
+}
+
+.nav-links li a:hover {
+    font-weight: 600;
 }
 
 .nav-links li a {
