@@ -70,3 +70,8 @@ body {
 .nav-links li a.active {
     color: var(--text-color);
 }
+
+.hi-text {
+    color: white;
+}
+
