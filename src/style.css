@@ -87,13 +87,13 @@ body {
     text-align: center;
 }
 
-.title {
+#title {
     font-size: 3rem;
     letter-spacing: .125rem;
     margin-bottom: 0px;
 }
 
-.title h1 {
+#title h1 {
     margin-top: 3.5rem;
     font-weight: normal;
 }
@@ -176,7 +176,7 @@ body {
 .instagram svg:hover {
     fill: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     /* box-shadow: 0px 3px 10px rgba(0,0,0,.25); */
-    /* -webkit-background-clip: text;
+    -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
 }
