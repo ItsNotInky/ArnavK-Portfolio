@@ -63,7 +63,8 @@ body {
 }
 
 .nav-links li:hover {
-    background-color: #262d3b;
+    background-color: #262d3b52;
+    
     border-radius: 10px;
 }
 
