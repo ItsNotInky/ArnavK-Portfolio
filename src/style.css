@@ -127,8 +127,8 @@ body {
     position: fixed;
     bottom: 0px;
     display: flex;
-    text-align: center;
-    left: 42%;
+    width: 100%;
+    justify-content: center;
 }
 
 .social-media a {
