@@ -54,6 +54,7 @@ body {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+    overflow-y: visible;
 }
 
 .navbar {
@@ -145,7 +146,7 @@ body {
 }
 
 .social-media-container {
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     width: 100%;
     text-align: center;
@@ -154,6 +155,7 @@ body {
 .social-media-container a {
     margin: 1rem;
     align-content: center;
+    text-decoration: none;
 }
 
 #github {
