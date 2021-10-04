@@ -73,5 +73,24 @@ body {
 
 .hi-text {
     color: white;
+    padding: 2.7rem;
 }
 
+#idea-link a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#i-build{
+    font-size: 3.5rem;
+}
+
+#My-name{
+    font-size: 1.65rem;
+    /* padding: auto; */
+
+}
+
+#one-para{
+    font-size: 1.61rem;
+}
