@@ -45,6 +45,8 @@ body {
     -o-background-size: cover;
     background-size: cover;
     backdrop-filter: blur(4px);
+    -moz-backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     font-family: 'NATS Regular', sans-serif;
     background-color: var(--bg-color);
     -webkit-touch-callout: none; /* iOS Safari */
