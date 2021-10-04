@@ -1,6 +1,7 @@
 :root {
     --bg-color: #1A1E24;
     --text-color: #00FFF5;
+    --bg-color-rgba: rgba(26, 30, 36, 0.8);
 }
 
 * {
@@ -16,7 +17,6 @@
 }
 
 body {
-    /* background-image: url("background.png"); */
     margin: 0px;
     min-height: 100vh;
     height: 100vh;
@@ -24,7 +24,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(var(--bg-color-rgba), var(--bg-color-rgba)), url(background.png);
+    background-image: linear-gradient(var(--bg-color-rgba), var(--bg-color-rgba)), url(../../background.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     -webkit-background-size: cover;
@@ -35,21 +35,19 @@ body {
     -webkit-backdrop-filter: blur(4px);
     font-family: 'NATS Regular', sans-serif;
     background-color: var(--bg-color);
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     overflow-y: visible;
 }
-
 
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-color);
     color: var(--text-color);
     padding: 1rem 0rem 1rem 0rem;
 }
