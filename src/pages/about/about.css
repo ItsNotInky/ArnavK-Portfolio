@@ -89,8 +89,10 @@ body {
 }
 
 .about-text-container {
+    margin-top: 3rem;
     color: white;
     padding: 2.7rem;
+    width: 50%;
 }
 
 .about-text-container h1 {
@@ -105,6 +107,9 @@ body {
 
 #i-build {
     font-size: 3.5rem;
+    line-height: 1;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
 #one-para {
