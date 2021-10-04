@@ -1,6 +1,7 @@
 :root {
     --bg-color: #1A1E24;
     --text-color: #00FFF5;
+    --bg-color-rgba: rgba(26, 30, 36, 0.8);
 }
 
 * {
@@ -18,7 +19,21 @@
 
 body {
     margin: 0px;
-    padding: 0px;
+    min-height: 100vh;
+    height: 100vh;
+    min-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(var(--bg-color-rgba), var(--bg-color-rgba)), url(../../background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     font-family: 'NATS Regular', sans-serif;
     background-color: var(--bg-color);
     -webkit-touch-callout: none; /* iOS Safari */
@@ -27,13 +42,13 @@ body {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+    overflow-y: visible;
 }
 
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-color);
     color: var(--text-color);
     padding: 1rem 0rem 1rem 0rem;
 }
@@ -50,10 +65,8 @@ body {
 }
 
 .nav-links li:hover {
-    background-color: #262d3b;
-    border-radius: .3rem;
-    /* text-decoration: underline;
-    text-underline-offset: .35rem; */
+    background-color: #262d3b62;
+    border-radius: 10px;
 }
 
 .nav-links li a {
@@ -71,7 +84,7 @@ body {
     color: var(--text-color);
 }
 
-.hi-text {
+.about-text-container {
     color: white;
     padding: 2.7rem;
 }
