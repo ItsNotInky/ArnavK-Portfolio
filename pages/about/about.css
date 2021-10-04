@@ -36,12 +36,12 @@ body {
     -webkit-backdrop-filter: blur(4px);
     font-family: 'NATS Regular', sans-serif;
     background-color: var(--bg-color);
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     overflow-y: visible;
 }
 
@@ -67,6 +67,10 @@ body {
 .nav-links li:hover {
     background-color: #262d3b62;
     border-radius: 10px;
+}
+
+.nav-links li a:hover:not(.nav-links li a.active) {
+    font-weight: 600;
 }
 
 .nav-links li a {
