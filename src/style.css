@@ -111,6 +111,7 @@ body {
     align-items: center;
     justify-content: center; */ /* Removed Flex */
     text-align: center;
+    margin-bottom: 5.5rem; /* 88px also good */
 }
 
 #title {
