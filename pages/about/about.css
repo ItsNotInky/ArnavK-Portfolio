@@ -93,21 +93,39 @@ body {
     padding: 2.7rem;
 }
 
-#idea-link a{
+.about-text-container h1 {
+    font-weight: normal;
+}
+
+#my-name {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    /* padding: auto; */
+}
+
+#i-build {
+    font-size: 3.5rem;
+}
+
+#one-para {
+    font-size: 1.68rem;
+    line-height: 1.5;
+}
+
+#two-para {
+    line-height: 1.5;
+}
+
+#three-para {
+    line-height: 1.5;
+}
+
+#idea-link a {
     text-decoration: none;
     color: var(--text-color);
 }
 
-#i-build{
-    font-size: 3.5rem;
-}
-
-#My-name{
-    font-size: 1.65rem;
-    /* padding: auto; */
-
-}
-
-#one-para{
-    font-size: 1.61rem;
+#idea-link a:hover {
+    text-decoration: underline;
+    text-underline-offset: .3rem;
 }
