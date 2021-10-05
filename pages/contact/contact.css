@@ -2,6 +2,8 @@
     --bg-color: #1A1E24;
     --text-color: #00FFF5;
     --bg-color-rgba: rgba(26, 30, 36, 0.8);
+    --form-bg-color: #323232;
+    --form-text-color: #9D9D9D;
 }
 
 * {
@@ -104,4 +106,65 @@ body {
 
 .nav-links li a.active {
     color: var(--text-color);
+}
+
+.container {
+    color: white;
+    padding: 3rem;
+    font-family: 'NATS Regular', 'Sans-Serif';
+}
+
+.container h1 {
+    font-size: 4rem;
+    letter-spacing: .15rem;
+    line-height: 1.1;
+    font-weight: normal;
+}
+.container h2 {
+    font-weight: normal;
+    font-size: 1.8rem;
+}
+
+.container h2 a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.container h2 a:hover {
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+}
+
+.contact-form-container {
+    padding-top: 25px;
+    text-align: center;
+}
+
+.contact-form-container input[type="text"], input[type="email"] {
+    background-color: var(--form-bg-color);
+    border: none;
+    border-radius: 15px;
+    width: 35rem;
+    height: 50px;
+    padding: 12px 15px;
+    color: var(--form-text-color);
+}
+
+.contact-form-container input:focus, textarea:focus {
+    outline: none;
+}
+
+.contact-form-container input, 
+.contact-form-container input::-webkit-input-placeholder, 
+.contact-form-container input::-moz-placeholder, 
+.contact-form-container input:-moz-placeholder, 
+.contact-form-container input:-ms-input-placeholder {
+    font-size: 1rem;
+    line-height: 3;
+}
+
+.contact-form-container input[type="submit"] {
+    padding: 15px 40px;
+    border-radius: 15px;
+    border: none;
 }
