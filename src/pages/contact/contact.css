@@ -19,20 +19,20 @@
     src: local('NATS Regular'), url('../../NATS-Regular.woff') format('woff');
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: .5em;
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     margin-block: .5em;
 }
 
-body:hover::-webkit-scrollbar-thumb {
+:hover::-webkit-scrollbar-thumb {
     background-color: #8383836c;
     border-radius: 2rem;
 }
 
-body::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background-color: #b1b1b193;
     border-radius: 2rem;
 }
@@ -137,7 +137,6 @@ body {
 
 .contact-form-container {
     padding-top: 25px;
-    text-align: center;
 }
 
 .contact-form-container input[type="text"], input[type="email"], textarea {
@@ -151,6 +150,7 @@ body {
     height: 60px;
     padding: 15px 15px;
     color: var(--form-text-color);
+    line-height: 2;
 }
 
 .contact-form-container textarea {
@@ -175,9 +175,7 @@ body {
 .contact-form-container textarea::-ms-input-placeholder, 
 .contact-form-container textarea:-ms-input-placeholder, 
 .contact-form-container textarea::placeholder {
-    color: red;
-    opacity: 1;
-    line-height: 0;
+    color: var(--form-text-color);
 }
 
 .contact-form-container input[type="submit"] {
@@ -189,4 +187,9 @@ body {
     border: none;
     background-color: #00BEC7;
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+.contact-form-container input[type="submit"]:hover {
+    transform: scale(1.03);
 }
