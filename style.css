@@ -31,7 +31,7 @@ body::-webkit-scrollbar-track {
 }
 
 body:hover::-webkit-scrollbar-thumb {
-    background-color: #8383836c;
+    background-color: #b1b1b193;
     border-radius: 2rem;
 }
 
@@ -75,6 +75,7 @@ body {
     user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
     /* overflow-y: visible; */
     overflow: visible;
+    
 }
 
 .navbar {
@@ -102,7 +103,7 @@ body {
 }
 
 .nav-links li a:hover:not(.nav-links li a.active) {
-    font-weight: 600;
+    font-weight: normal;
 }
 
 .nav-links li a {
