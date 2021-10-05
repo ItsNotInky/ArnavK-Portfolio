@@ -17,6 +17,24 @@
     src: local('NATS Regular'), url('../../NATS-Regular.woff') format('woff');
 }
 
+body::-webkit-scrollbar {
+    width: .5em;
+}
+
+body::-webkit-scrollbar-track {
+    margin-block: .5em;
+}
+
+body:hover::-webkit-scrollbar-thumb {
+    background-color: #8383836c;
+    border-radius: 2rem;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #b1b1b193;
+    border-radius: 2rem;
+}
+
 body {
     margin: 0px;
     min-height: 100%;

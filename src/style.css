@@ -33,13 +33,11 @@ body::-webkit-scrollbar-track {
 body:hover::-webkit-scrollbar-thumb {
     background-color: #8383836c;
     border-radius: 2rem;
-    opacity: .1;
 }
 
 body::-webkit-scrollbar-thumb:hover {
     background-color: #b1b1b193;
     border-radius: 2rem;
-    opacity: .1;
 }
 
 html {
