@@ -113,3 +113,39 @@ body {
 .nav-links li a.active {
     color: var(--text-color);
 }
+
+.text-container {
+    color: white;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#title {
+    font-weight: normal;
+    font-family: 'NATS Regular', 'Sans-Serif';
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+#semi-title {
+    font-family: 'NATS Regular', 'Sans-Serif';
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.projects {
+    color: white;
+}
+
+.projects h1 {
+    font-weight: normal;
+}
+
+.projects h2 {
+    font-weight: normal;
+}
+
+.projects a {
+    color: var(--text-color);
+    text-decoration: none;
+}
