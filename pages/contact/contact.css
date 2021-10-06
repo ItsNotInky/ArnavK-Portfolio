@@ -89,9 +89,9 @@ body {
     border-radius: 10px;
 }
 
-.nav-links li a:hover:not(.nav-links li a.active) {
+/* .nav-links li a:hover:not(.nav-links li a.active) {
     font-weight: 600;
-}
+} */
 
 .nav-links li a {
     color: white;
