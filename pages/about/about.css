@@ -96,7 +96,7 @@ body {
 }
 
 .nav-links li a:hover:not(.nav-links li a.active) {
-    font-weight: 600;
+    font-weight: normal;
 }
 
 .nav-links li a {
