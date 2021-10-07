@@ -117,28 +117,32 @@ body {
 .text-container {
     color: white;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 2.7rem;
 }
 
 #title {
     font-weight: normal;
     font-family: 'NATS Regular', 'Sans-Serif';
     font-size: 3.5rem;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 #semi-title {
     font-family: 'NATS Regular', 'Sans-Serif';
     font-weight: normal;
     font-size: 2rem;
+    line-height: 1;
 }
 
 .projects {
     color: white;
+    padding-inline: 7rem;
+    padding-top: 1.3rem;
 }
 
 .projects h1 {
     font-weight: normal;
+    line-height: 0%;
 }
 
 .projects h2 {
@@ -148,4 +152,11 @@ body {
 .projects a {
     color: var(--text-color);
     text-decoration: none;
+}
+
+.rss, .nebula {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 3rem;
+    overflow: visible;
 }
