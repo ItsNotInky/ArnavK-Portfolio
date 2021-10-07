@@ -194,7 +194,9 @@ body {
 }
 
 #nebula-bg {
-    position: absolute;
+    position: relative;
+    left: 320px;
+    top: 100px;
     width: 600px;
     height: 800px;
     z-index: 1;
@@ -203,8 +205,8 @@ body {
 #nebula-front {
     position: relative;
     z-index: 2;
-    left: 400px;
-    top: 400px;
+    left: 50px;
+    top: 190px;
     width: 400px;
     height: 500px;
 }
