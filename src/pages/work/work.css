@@ -136,8 +136,8 @@ body {
 
 .projects {
     color: white;
-    padding-inline: 7rem;
-    padding-top: 1.3rem;
+    /* padding-inline: 7rem; */
+    /* padding-block: 1.3rem; */
 }
 
 .projects h1 {
@@ -154,9 +154,57 @@ body {
     text-decoration: none;
 }
 
+.projects a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+
+.projects img {
+    border: 5px solid white;
+    border-radius: 64px;
+
+    -user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 .rss, .nebula {
     display: flex;
-    justify-content: space-between;
-    padding-block: 3rem;
-    overflow: visible;
+    justify-content: space-around;
+    padding-block: 4rem;
+}
+
+#rss-bg {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    z-index: 1;
+}
+
+#rss-front {
+    position: relative;
+    z-index: 2;
+    right: 200px;
+    top: 100px;
+    width: 400px;
+    height: 400px;
+}
+
+#nebula-bg {
+    position: absolute;
+    width: 600px;
+    height: 800px;
+    z-index: 1;
+}
+
+#nebula-front {
+    position: relative;
+    z-index: 2;
+    left: 400px;
+    top: 400px;
+    width: 400px;
+    height: 500px;
 }
