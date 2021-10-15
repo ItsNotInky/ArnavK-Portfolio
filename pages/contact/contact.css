@@ -123,6 +123,7 @@ body {
 .container h2 {
     font-weight: normal;
     font-size: 1.8rem;
+    line-height: 1.2;
 }
 
 .container h2 a {
@@ -192,4 +193,8 @@ body {
 
 .contact-form-container input[type="submit"]:hover {
     transform: scale(1.03);
+}
+
+#thankyousubmit {
+    padding-top: 30px;
 }
