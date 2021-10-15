@@ -22,13 +22,23 @@
         <h1>Let's Discuss</h1>
         <h2>Let's Talk By Filling Out The Form Below, Or Emailing <a href="mailto:hello.arnavk@gmail.com">Hello.arnavk@gmail.com</a></h2>
         <div class="contact-form-container">
-            <form method="POST" autocomplete="off" action="contactform.php">
+            <!-- <form method="POST" autocomplete="off" action="contactform.php">
                 <input type="text" name="name" placeholder="NAME" required>
                 <br><br>
                 <input type="email" name="email" placeholder="EMAIL" required>
                 <br><br>
                 <textarea placeholder="MESSAGE" name="message" required></textarea>
                 <br><br>
+                <input type="submit" name="submit" value="SUBMIT">
+            </form> -->
+            <form method="POST" autocomplete="off" action="https://formspree.io/f/meqvwqpj">
+                <input type="text" name="name" placeholder="NAME" required>
+                <br><br>
+                <input type="email" name="_replyto" placeholder="EMAIL" required>
+                <br><br>
+                <textarea placeholder="MESSAGE" name="message" required></textarea>
+                <br><br>
+                <input type="hidden" name="_next" value="">
                 <input type="submit" name="submit" value="SUBMIT">
             </form>
         </div>
