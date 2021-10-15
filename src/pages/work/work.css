@@ -188,9 +188,9 @@ body {
     position: relative;
     z-index: 2;
     right: 200px;
-    top: 100px;
-    width: 500px;
-    height: 400px;
+    top: 150px;
+    width: 400px;
+    height: 320px;
 }
 
 #nebula-bg {
