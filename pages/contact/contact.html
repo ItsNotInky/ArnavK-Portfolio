@@ -31,18 +31,101 @@
                 <br><br>
                 <input type="submit" name="submit" value="SUBMIT">
             </form> -->
-            <form method="POST" autocomplete="off" action="https://formspree.io/f/meqvwqpj">
-                <input type="submit" formaction="submit()" style="visibility: hidden; display: none;">
+            <!-- <form method="POST" autocomplete="off" action="https://formspree.io/f/meqvwqpj">
+                <input type="hidden" name="_subject" value="Contact form entry on website!">
                 <input type="text" name="name" placeholder="NAME" required>
                 <br><br>
                 <input type="email" name="_replyto" placeholder="EMAIL" required>
                 <br><br>
                 <textarea placeholder="MESSAGE" name="message" required></textarea>
                 <br><br>
-                <input type="hidden" name="_next" value="">
+                <input type="hidden" name="_next" value="https://discord.com/">
                 <input type="submit" name="submit" value="SUBMIT">
                 <h2 id="thankyousubmit">Thank You for submitting the form. I will contact you shortly.</h2>
+            </form> -->
+
+            <form id="contact_form" method="POST" autocomplete="off">
+                <input type="hidden" name="subject" value="Contact form entry on website!">
+                <input type="text" name="name" placeholder="NAME" required>
+                <br><br>
+                <input type="email" name="email" placeholder="EMAIL" required>
+                <br><br>
+                <textarea placeholder="MESSAGE" name="message" required></textarea>
+                <br><br>
+                <input type="submit" name="submit" value="SUBMIT" id="js_send">
+                <h2 id="thankyousubmit">Thank You for submitting the form. I will contact you shortly.</h2>
             </form>
+            
+            <script>
+            
+                //update this with your js_form selector
+                var form_id_js = "contact_form";
+            
+                var data_js = {
+                    "access_token": "jihygk9oe7p5dsqnc0hkwuf3"
+                };
+            
+                function js_onSuccess() {
+                    // remove this to avoid redirect
+                    // window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+                    var thankyousubmit = document.querySelector("#thankyousubmit")
+                    thankyousubmit.style.display = block;
+                }
+            
+                function js_onError(error) {
+                    // remove this to avoid redirect
+                    // window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+                }
+            
+                var sendButton = document.getElementById("js_send");
+            
+                function js_send() {
+                    sendButton.value='Sending…';
+                    sendButton.disabled=true;
+                    var request = new XMLHttpRequest();
+                    request.onreadystatechange = function() {
+                        if (request.readyState == 4 && request.status == 200) {
+                            js_onSuccess();
+                        } else
+                        if(request.readyState == 4) {
+                            js_onError(request.response);
+                        }
+                    };
+            
+                    var subject = document.querySelector("#" + form_id_js + " [name='subject']").value;
+                    var name = document.querySelector("#" + form_id_js + " [name='name']").value;
+                    var email = document.querySelector("#" + form_id_js + " [name='email']").value;
+                    var message = document.querySelector("#" + form_id_js + " [name='message']").value;
+                    data_js['subject'] = subject;
+                    data_js['name'] = name;
+                    data_js['email'] = email;
+                    data_js['text'] = message;
+                    var params = toParams(data_js);
+            
+                    request.open("POST", "https://postmail.invotes.com/send", true);
+                    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            
+                    request.send(params);
+            
+                    return false;
+                }
+            
+                sendButton.onclick = js_send;
+            
+                function toParams(data_js) {
+                    var form_data = [];
+                    for ( var key in data_js ) {
+                        form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+                    }
+            
+                    return form_data.join("&");
+                }
+            
+                var js_form = document.getElementById(form_id_js);
+                js_form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                });
+            </script>
         </div>
     </div>
 </body>
