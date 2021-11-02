@@ -22,7 +22,7 @@
         <h1>Let's Discuss</h1>
         <h2>Let's Talk By Filling Out The Form Below, Or Emailing <a href="mailto:hello.arnavk@gmail.com">Hello.arnavk@gmail.com</a></h2>
         <div class="contact-form-container">
-            <form method="POST" autocomplete="off" action="">
+            <form autocomplete="off" action="sendData()" id="contact-form">
                 <input type="text" name="name" placeholder="NAME" required>
                 <br><br>
                 <input type="email" name="email" placeholder="EMAIL" required>
@@ -30,7 +30,28 @@
                 <textarea placeholder="MESSAGE" name="message" required></textarea>
                 <br><br>
                 <input type="submit" name="submit" value="SUBMIT">
+                <h2 id="thankyousubmit">Thank You for submitting the form. I will contact you shortly.</h2>
             </form>
+
+            <script>
+                function sendData() {
+                    var formElements = document.getElementById("contact-form").elements;
+                    var name = formElements["name"];
+                    var email = formElements["email"];
+                    var message = formElements["message"];
+
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            document.getElementById("thankyousubmit").style.visibility = "initial";
+                        }
+                    };
+                    xhttp.open("POST", "https://portfolio.itsnotnebula.repl.co/sendmail", true);
+                    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    xhttp.send("name="+ name + "&email=" + email + "&message=" + message);
+                }
+            </script>
+            
             <!-- <form method="POST" autocomplete="off" action="https://formspree.io/f/meqvwqpj">
                 <input type="hidden" name="_subject" value="Contact form entry on website!">
                 <input type="text" name="name" placeholder="NAME" required>

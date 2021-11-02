@@ -197,5 +197,5 @@ body {
 
 #thankyousubmit {
     padding-top: 30px;
-    display: none;
+    visibility: hidden;
 }
