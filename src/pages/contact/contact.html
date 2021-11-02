@@ -22,7 +22,7 @@
         <h1>Let's Discuss</h1>
         <h2>Let's Talk By Filling Out The Form Below, Or Emailing <a href="mailto:hello.arnavk@gmail.com">Hello.arnavk@gmail.com</a></h2>
         <div class="contact-form-container">
-            <form autocomplete="off" action="sendData()" id="contact-form">
+            <form method="POST" autocomplete="off" onsubmit="test();" id="contact-form">
                 <input type="text" name="name" placeholder="NAME" required>
                 <br><br>
                 <input type="email" name="sender_email" placeholder="EMAIL" required>
@@ -32,9 +32,11 @@
                 <input type="submit" name="submit" value="SUBMIT">
                 <h2 id="thankyousubmit">Thank You for submitting the form. I will contact you shortly.</h2>
             </form>
-            
+
             <script>
                 function sendData() {
+                    console.log("Button pressed");
+
                     var formElements = document.getElementById("contact-form").elements;
                     var name = formElements["name"];
                     var email = formElements["sender_email"];
@@ -42,13 +44,26 @@
 
                     var xhttp = new XMLHttpRequest();
                     xhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
+                        if (this.readyState == 4 && (this.status == 200 || this.responseText == "Sent")) {
+                            console.log(this.responseText);
                             document.getElementById("thankyousubmit").style.visibility = "initial";
                         }
                     };
-                    xhttp.open("POST", "https://portfolio.itsnotnebula.repl.co/sendmail", true);
+                    xhttp.open("POST", "https://portfolio.itsnotnebula.repl.co/sendmail/", true);
                     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                     xhttp.send("name="+ name + "&sender_email=" + sender_email + "&message=" + message);
+                }
+
+                function test() {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && (this.status == 200 || this.responseText == "GG")) {
+                            console.log(this.responseText);
+                            document.getElementById("thankyousubmit").style.visibility = "initial";
+                        }
+                    };
+                    xhttp.open("GET", "https://portfolio.itsnotnebula.repl.co/sendmail/", true);
+                    xhttp.send();
                 }
             </script>
             
