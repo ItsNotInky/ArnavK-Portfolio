@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,25 +21,95 @@
     </nav>
     <div class="container">
         <h1>Let's Discuss</h1>
-        <h2>Let's Talk By Filling Out The Form Below, Or Emailing <a href="mailto:hello.arnavk@gmail.com">Hello.arnavk@gmail.com</a></h2>
+        <h2>Let's Talk By Filling Out The Form Below, Or Emailing <a
+                href="mailto:hello.arnavk@gmail.com">Hello.arnavk@gmail.com</a></h2>
         <div class="contact-form-container">
             <!-- action="https://portfolio.itsnotnebula.repl.co/sendmail" -->
-            <form onsubmit="sendData(); return false;" autocomplete="off" id="contact-form">
-                <input type="text" name="name" placeholder="NAME" required>
+            <form onsubmit="sendData();" autocomplete="off" id="contact_form">
+                <input type="text" name="name" placeholder="NAME" id="name" required>
                 <br><br>
-                <input type="email" name="sender_email" placeholder="EMAIL" required>
+                <input type="email" name="sender_email" placeholder="EMAIL" id="email" required>
                 <br><br>
-                <textarea placeholder="MESSAGE" name="message" required></textarea>
+                <textarea placeholder="MESSAGE" name="message" id="message" required></textarea>
                 <br><br>
-                <input type="submit" name="submit" value="SUBMIT">
+                <input type="submit" name="submit" value="SUBMIT" id="js_send">
                 <h2 id="thankyousubmit">Thank You for submitting the form. I will contact you shortly.</h2>
             </form>
 
             <script>
+                var form_id_js = "contact_form";
+
+                var data_js = {};
+
+                function js_onSuccess() {
+                    // remove this to avoid redirect
+                    // window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+                    sendButton.disabled = false;
+                    sendButton.value = 'SUBMIT';
+                    document.querySelector('#name').value = '';
+                    document.querySelector('#email').value = '';
+                    document.querySelector('#message').value = '';
+                    document.querySelector("#thankyousubmit").style.visibility = "initial";
+                }
+
+                function js_onError(error) {
+                    // remove this to avoid redirect
+                    // window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+                }
+
+                var sendButton = document.getElementById("js_send");
+
+                function js_send() {
+                    sendButton.value = 'Sending…';
+                    sendButton.disabled = true;
+                    var request = new XMLHttpRequest();
+                    request.onreadystatechange = function () {
+                        if (request.readyState == 4 && request.status == 200) {
+                            js_onSuccess();
+                        } else
+                            if (request.readyState == 4) {
+                                js_onError(request.response);
+                            }
+                    };
+
+                    var name = document.querySelector("#" + form_id_js + " [name='name']").value;
+                    var sender_email = document.querySelector("#" + form_id_js + " [name='sender_email']").value;
+                    var message = document.querySelector("#" + form_id_js + " [name='message']").value;
+                    data_js['name'] = name;
+                    data_js['sender_email'] = sender_email;
+                    data_js['message'] = message;
+                    var params = toParams(data_js);
+
+                    request.open("POST", "https://portfolio.itsnotnebula.repl.co/sendmail", true);
+                    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+                    request.send(params);
+
+                    return false;
+                }
+
+                sendButton.onclick = js_send;
+
+                function toParams(data_js) {
+                    var form_data = [];
+                    for (var key in data_js) {
+                        form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+                    }
+
+                    return form_data.join("&");
+                }
+
+                var js_form = document.getElementById(form_id_js);
+                js_form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                });
+            </script>
+
+            <!-- <script>
                 function sendData() {
                     console.log("Button pressed");
 
-                    var formElements = document.getElementById("contact-form").elements;
+                    var formElements = document.getElementById("contact_form").elements;
                     var name = formElements["name"];
                     var email = formElements["sender_email"];
                     var message = formElements["message"];
@@ -71,8 +142,8 @@
                     xhttp.open("GET", "https://portfolio.itsnotnebula.repl.co/sendmail", true);
                     xhttp.send();
                 }
-            </script>
-            
+            </script> -->
+
             <!-- <form method="POST" autocomplete="off" action="https://formspree.io/f/meqvwqpj">
                 <input type="hidden" name="_subject" value="Contact form entry on website!">
                 <input type="text" name="name" placeholder="NAME" required>
@@ -85,7 +156,7 @@
                 <input type="submit" name="submit" value="SUBMIT">
                 <h2 id="thankyousubmit">Thank You for submitting the form. I will contact you shortly.</h2>
             </form> -->
-            
+
             <!-- <script>
             
                 //update this with your js_form selector
