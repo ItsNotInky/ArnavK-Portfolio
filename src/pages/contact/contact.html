@@ -22,7 +22,8 @@
         <h1>Let's Discuss</h1>
         <h2>Let's Talk By Filling Out The Form Below, Or Emailing <a href="mailto:hello.arnavk@gmail.com">Hello.arnavk@gmail.com</a></h2>
         <div class="contact-form-container">
-            <form method="POST" autocomplete="off" onsubmit="test();" id="contact-form">
+            <!-- action="https://portfolio.itsnotnebula.repl.co/sendmail" -->
+            <form onsubmit="sendData(); return false;" autocomplete="off" id="contact-form">
                 <input type="text" name="name" placeholder="NAME" required>
                 <br><br>
                 <input type="email" name="sender_email" placeholder="EMAIL" required>
@@ -42,6 +43,8 @@
                     var email = formElements["sender_email"];
                     var message = formElements["message"];
 
+                    var data = `name=${expression}&sender_email=${sender_email}&message=${message}`;
+
                     var xhttp = new XMLHttpRequest();
                     xhttp.onreadystatechange = function() {
                         if (this.readyState == 4 && (this.status == 200 || this.responseText == "Sent")) {
@@ -49,20 +52,23 @@
                             document.getElementById("thankyousubmit").style.visibility = "initial";
                         }
                     };
-                    xhttp.open("POST", "https://portfolio.itsnotnebula.repl.co/sendmail/", true);
+                    xhttp.open("POST", "https://portfolio.itsnotnebula.repl.co/sendmail", true);
                     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                    xhttp.send("name="+ name + "&sender_email=" + sender_email + "&message=" + message);
+                    // xhttp.send("name="+ name + "&sender_email=" + sender_email + "&message=" + message);
+                    xhttp.send(data);
+
+                    return false;
                 }
 
                 function test() {
                     var xhttp = new XMLHttpRequest();
                     xhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && (this.status == 200 || this.responseText == "GG")) {
+                        if (this.readyState == 4 && (this.status == 200 || this.responseText == "No U")) {
                             console.log(this.responseText);
                             document.getElementById("thankyousubmit").style.visibility = "initial";
                         }
                     };
-                    xhttp.open("GET", "https://portfolio.itsnotnebula.repl.co/sendmail/", true);
+                    xhttp.open("GET", "https://portfolio.itsnotnebula.repl.co/sendmail", true);
                     xhttp.send();
                 }
             </script>
